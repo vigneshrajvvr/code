@@ -1,4 +1,4 @@
-//Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+//Given an array of integers, return indices of the two numbers such that they add up to a specific target. It's order of complexity is O(n^2)
 import java.io.*;
 import java.util.Scanner;
 class task1
