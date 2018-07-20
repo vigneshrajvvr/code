@@ -11,23 +11,30 @@ public class Main
 	        for(j=0;j<6;j++)
 	        {
 	            arr[i][j] = in.nextInt();
+	            //System.out.print(" ");
 	        }
+	        //System.out.println("");
 	    }
-	    for(k=0;k<4;k++)
+	    System.out.println("Sum of subset of array elements:");
+	    for(k1=0;k1<4;k1++)
 	    {
-	        for(i =O1;i<O2;i++)
+	        for(k2 =0;k2<4;k2++ )
 	        {
-	            for(j=I1;j<I2;j++)
+	            for(i =O1;i<O2;i++)
 	            {
-	                sum =sum + arr[i][j];
+	                for(j=I1;j<I2;j++)
+	                {
+	                    sum =sum + arr[i][j];
+	                }
 	            }
 	        }
-	        O1++;
-	        O2++;
-	        I1++;
-	        I2++;
+	    }
+	         O1++;
+	         O2++;
+	         I1++;
+	         I2++;
 	        System.out.println(""+sum);
+	        sum=0;
 	    }
 	}
 }
-
