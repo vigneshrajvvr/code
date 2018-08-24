@@ -37,6 +37,7 @@ class Main
         System.out.println("Number of rotations :");
         d =in.nextInt();
         arr = a.array(arr,d,arr.length);
+        System.out.println("Rotated array elements are :");
         for(int i=0;i<n;i++)
         {
             System.out.println(""+arr[i]);
