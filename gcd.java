@@ -1,11 +1,15 @@
-//GCD of two numbers by normal method
+//GCD of a number in various ways
 import java.util.Scanner;
 public class Main
 {
-    static int gcd(int a, int b)
+    static int gcd(int a, int b) // Using normal method
     {
         int value=0;
-        if(a>b)
+        if(a==b)
+        {
+            value = a;
+        }
+        else if(a>b)
         {
             for(int i =1;i<=b;i++)
             {
@@ -27,6 +31,39 @@ public class Main
         }
         return value;
     }
+    static int gcdeuclidean(int a, int b) // Using euclidean algorithum
+    {
+        int value;
+        if(a==b)
+        {
+            value = a;
+        }
+        else if(a>b)
+        {
+            value = a%b;
+            while(value !=0)
+            {
+                a=b;
+                b=value;
+                if(a %b == 0)
+                    break;
+                value = a %b;
+            }
+        }
+        else
+        {
+            value = b%a;
+            while(value !=0)
+            {
+                b=a;
+                a=value;
+                if(b%a == 0)
+                    break;
+                value = b %a;
+            }
+        }
+        return value;
+    }
 	public static void main(String[] args)
 	{
 	    int a,b;
@@ -35,5 +72,6 @@ public class Main
 	    a = in.nextInt();
 	    b = in.nextInt();
 	    System.out.printf("The GCD of %d and %d is %d",a,b,gcd(a,b));
+	    System.out.printf("\nThe GCD of %d and %d using euclidean algorithm is %d",a,b,gcdeuclidean(a,b));
 	}
 }
