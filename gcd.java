@@ -64,6 +64,14 @@ public class Main
         }
         return value;
     }
+    static int gcdrecursion(int a, int b)//using recursion
+    {
+        if(b==0)
+        {
+            return a;
+        }
+        return gcdrecursion(b,a%b);
+    }
 	public static void main(String[] args)
 	{
 	    int a,b;
@@ -73,5 +81,7 @@ public class Main
 	    b = in.nextInt();
 	    System.out.printf("The GCD of %d and %d is %d",a,b,gcd(a,b));
 	    System.out.printf("\nThe GCD of %d and %d using euclidean algorithm is %d",a,b,gcdeuclidean(a,b));
+	    System.out.printf("\nThe GCD of %d and %d using recursion is %d",a,b,gcdrecursion(a,b));
 	}
 }
+
